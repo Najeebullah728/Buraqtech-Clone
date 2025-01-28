@@ -1,0 +1,140 @@
+/* Slide-in animation for navbar */
+.animated-navbar {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  /* Animation for logo */
+  .animate-logo {
+    animation: fadeInLogo 1s ease-in-out forwards;
+  }
+  
+  /* Animation for nav items */
+  .animate-nav-item {
+    animation: fadeInNavItem 1.5s ease-in-out forwards;
+    opacity: 0; /* Start with hidden */
+    animation-delay: 0.5s;
+  }
+  
+  /* Animation for hover effect */
+  .navbar-nav .nav-link:hover {
+    color: #ff6f61;  /* Change color on hover */
+    transform: scale(1.1);  /* Slight zoom effect */
+    transition: all 0.3s ease;
+  }
+  
+  /* Keyframes for the navbar animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Keyframes for the logo animation */
+  @keyframes fadeInLogo {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Keyframes for nav item animation */
+  @keyframes fadeInNavItem {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #4a90e2, #0056b3);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+  color: #ffd700;
+}
+
+/* Underline Animation */
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #ffd700;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+/* Call-to-Action Button */
+.navbar-cta .btn-primary {
+  background-color: #ffd700;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-cta .btn-primary:hover {
+  background-color: #ffcc00;
+  transform: scale(1.1);
+}

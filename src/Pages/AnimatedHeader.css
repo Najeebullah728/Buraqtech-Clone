@@ -1,0 +1,45 @@
+/* Animations for header */
+.animated-title {
+    animation: fadeInDown 1.5s ease-out forwards;
+  }
+  
+  .animated-subtitle {
+    animation: fadeInUp 2s ease-out forwards;
+  }
+  
+  .animated-button {
+    animation: fadeIn 2.5s ease-out forwards;
+  }
+  
+  /* Keyframes for animation effects */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

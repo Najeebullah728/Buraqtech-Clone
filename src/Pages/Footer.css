@@ -1,0 +1,27 @@
+/* Make html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Ensure the root div takes the full height and uses flexbox */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* The content area takes up available space, pushing the footer down */
+.main-content {
+  flex-grow: 1;
+  padding-bottom: 60px; /* To prevent overlap with footer */
+}
+
+/* Optional footer styles for alignment */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}

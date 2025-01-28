@@ -1,0 +1,18 @@
+/* Ensure body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Make sure the main content area takes the full height */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Add some padding to the content */
+.main-content {
+  flex-grow: 1;
+  padding-bottom: 50px; /* Adjust based on footer height */
+}
